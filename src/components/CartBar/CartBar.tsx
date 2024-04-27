@@ -3,7 +3,7 @@ import { useMediaQuery } from "react-responsive";
 import { CartBarContainer } from "./CartBar.style";
 import { AnimatePresence } from "framer-motion";
 import * as actions from "../../store/actions/cart/cartActions";
-import { CartTop } from "./CartTop/CartTop";
+import { CartHeader } from "./CartHeader/CartHeader";
 import { CartBottom } from "./CartBottom/CartBottom";
 import { CartContentContainer, CardProduct } from "./CartContent/CartContent";
 import { RemoveProduct } from "./CartBar.style";
@@ -57,7 +57,7 @@ export const CartBar = ({ closeCart }: any): any => {
                     }
                 }}
             >
-                <CartTop closeCart={closeCart} />
+                <CartHeader closeCart={closeCart} />
                 <CartContentContainer>
                     <AnimatePresence>
                         {products.map((product: any, index: number) => (

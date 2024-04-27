@@ -1,11 +1,12 @@
-import { FooterContainer, FooterText } from "./Footer.styled"
+import { FooterContainer } from "./Footer.styled"
+import { FooterText as Text } from "./FooterText/FooterText"
 
 export const Footer = () => {
 
     return (
         <>
             <FooterContainer>
-                <FooterText>MKS sistemas © Todos os direitos reservados</FooterText>
+                <Text>MKS sistemas © Todos os direitos reservados</Text>
             </FooterContainer>
         </>
     )

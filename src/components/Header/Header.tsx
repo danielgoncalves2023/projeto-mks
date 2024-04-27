@@ -1,8 +1,10 @@
 import { useSelector } from "react-redux";
 import { CartBar } from "../CartBar/CartBar";
-import { HeaderContainer, TitleDiv, MksTitle, SistemasTitle, CardButton, CartImage, CartCount } from "./Header.style";
+import { HeaderContainer } from "./Header.style";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
+import { TitleHeader } from "./TitleHeader/TitleHeader";
+import { ButtonHeader } from "./ButtonHeader/ButtonHeader";
 
 export const Header = () => {
     const { totalProducts } = useSelector((rootReducer: any) => rootReducer.cartReducer)
@@ -19,19 +21,10 @@ export const Header = () => {
     return (
         <>
             <HeaderContainer>
-                <TitleDiv>
-                    <MksTitle>MKS</MksTitle>
-                    <SistemasTitle>Sistemas</SistemasTitle>
-                </TitleDiv>
-                <CardButton
-                    whileHover={{ scale: 0.97 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={handleOpenCart}
-                >
-                    <CartImage src='/cart.png' alt='cart image' />
-                    <CartCount>{totalProducts}</CartCount>
-                </CardButton>
+                <TitleHeader />
+                <ButtonHeader handleOpenCart={handleOpenCart} totalProducts={totalProducts} />
             </HeaderContainer>
+
             <AnimatePresence>
                 {cartBar && <CartBar closeCart={handleCloseCart} />}
             </AnimatePresence>

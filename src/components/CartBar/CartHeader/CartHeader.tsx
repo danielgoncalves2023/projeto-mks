@@ -1,6 +1,6 @@
-import { ContainerTopDiv, CartTitle, CloseCart } from "./CartTop.style"
+import { ContainerTopDiv, CartTitle, CloseCart } from "./CartHeader.style"
 
-export const CartTop = ({ closeCart }: any) => {
+export const CartHeader = ({ closeCart }: any) => {
 
     return (
         <ContainerTopDiv>

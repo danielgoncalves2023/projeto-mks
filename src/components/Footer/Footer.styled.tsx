@@ -9,8 +9,3 @@ import styled from "styled-components"
         position: fixed;
         bottom: 0;
     `
-
-    export const FooterText = styled.p`
-        font-size: 12px;
-        font-weight: 400;
-    `

@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux"
-import {
-    CardButton, CardContainer, CardDetail, CardDetailContainer, CardImage, CardPrice, CardTitle, DivTitle
-} from "./CardProduct.style";
-import { addItemInCart } from "../../store/actions/cart/cartActions";
+import { CardContainer } from "./CardProduct.style";
+import { CardTitle } from "./CardTitle/CardTitle";
+import { CardDetail } from "./CardDetail/CardDetail";
+import { CardButton } from "./CardButton/CardButton";
 
 export const CardProduct = ({ product }: any) => {
     const roundedPrice = (price: number) => Math.round(price);
@@ -14,22 +14,9 @@ export const CardProduct = ({ product }: any) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, transition: { duration: 0.7 } }}
             >
-                <CardImage src={product.photo} alt={product.brand} />
-                <DivTitle>
-                    <CardTitle>{product.name}</CardTitle>
-                    <CardPrice>R${roundedPrice(product.price)}</CardPrice>
-                </DivTitle>
-                <CardDetailContainer>
-                    <CardDetail>{product.description}</CardDetail>
-                </CardDetailContainer>
-                <CardButton
-                    onClick={() => {
-                        dispatch(addItemInCart(product.name, product.photo, product.price))
-                    }
-                    }>
-                    <img src='/shopping-bag.png' alt='shopping bag' />
-                    <p>COMPRAR</p>
-                </CardButton>
+                <CardTitle roundedPrice={roundedPrice} product={product} />
+                <CardDetail product={product} />
+                <CardButton dispatch={dispatch} product={product} />
             </CardContainer>
         </>
     )
