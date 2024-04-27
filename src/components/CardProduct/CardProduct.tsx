@@ -4,7 +4,7 @@ import {
 } from "./CardProduct.style";
 import { addItemInCart } from "../../store/actions/cart/cartActions";
 
-export const CardProduct = ({ name, price, detail, photo, brand }: any) => {
+export const CardProduct = ({ product }: any) => {
     const roundedPrice = (price: number) => Math.round(price);
     const dispatch = useDispatch();
 
@@ -14,17 +14,17 @@ export const CardProduct = ({ name, price, detail, photo, brand }: any) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, transition: { duration: 0.7 } }}
             >
-                <CardImage src={photo} alt={brand} />
+                <CardImage src={product.photo} alt={product.brand} />
                 <DivTitle>
-                    <CardTitle>{name}</CardTitle>
-                    <CardPrice>R${roundedPrice(price)}</CardPrice>
+                    <CardTitle>{product.name}</CardTitle>
+                    <CardPrice>R${roundedPrice(product.price)}</CardPrice>
                 </DivTitle>
                 <CardDetailContainer>
-                    <CardDetail>{detail}</CardDetail>
+                    <CardDetail>{product.description}</CardDetail>
                 </CardDetailContainer>
                 <CardButton
                     onClick={() => {
-                        dispatch(addItemInCart(name, photo, price))
+                        dispatch(addItemInCart(product.name, product.photo, product.price))
                     }
                     }>
                     <img src='/shopping-bag.png' alt='shopping bag' />

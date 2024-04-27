@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { CartShopping } from "../CartShopping/CartShopping";
+import { CartBar } from "../CartBar/CartBar";
 import { HeaderContainer, TitleDiv, MksTitle, SistemasTitle, CardButton, CartImage, CartCount } from "./Header.style";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
@@ -33,7 +33,7 @@ export const Header = () => {
                 </CardButton>
             </HeaderContainer>
             <AnimatePresence>
-                {cartBar && <CartShopping closeCart={handleCloseCart} />}
+                {cartBar && <CartBar closeCart={handleCloseCart} />}
             </AnimatePresence>
         </>
     )

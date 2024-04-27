@@ -96,15 +96,13 @@ export const Layout = () => {
                             />
                         </>
                     )}
-                    {isError && <p>Ocorreu um erro ao buscar os produtos.</p>}
+                    {isError && (
+                        <p>Ocorreu um erro ao buscar os produtos.</p>
+                    )}
                     {responseData && responseData.products.map(product => (
                         <CardProduct
                             key={product.id}
-                            name={product.name}
-                            price={product.price}
-                            photo={product.photo}
-                            detail={product.description}
-                            brand={product.brand}
+                            product={product}
                         />
                     ))}
                 </GridProducts>
