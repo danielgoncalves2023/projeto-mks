@@ -37,6 +37,7 @@ export const SistemasTitle = styled.p`
     font-size: 20px;
     font-weight: 300;
     margin: 0 0 5px 10px;
+    overflow-y: hidden;
 
     @media (max-width: 520px) {
         font-size: 16px;

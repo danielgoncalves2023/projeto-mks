@@ -7,6 +7,7 @@ export const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-y: hidden;
 
     @media (max-width: 520px) {
         height: 48px;

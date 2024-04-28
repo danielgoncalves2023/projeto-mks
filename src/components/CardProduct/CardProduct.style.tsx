@@ -5,7 +5,7 @@ export const CardContainer = styled(motion.div)`
         position: relative;
         margin: 0 auto 20px;
         width: 218px;
-        height: 285px;
+        height: 295px;
         background-color: white;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         box-sizing: border-box;

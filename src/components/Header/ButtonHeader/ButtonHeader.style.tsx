@@ -12,7 +12,6 @@ export const CardButton = styled(motion.div)`
     background-color: white;
     margin-right: 80px;
     cursor: pointer;
-    overflow: hidden;
 
     @media (max-width: 520px) {
         width: 52px;
@@ -37,4 +36,5 @@ export const CartImage = styled.img`
 export const CartCount = styled.p`
     font-size: 18px;
     font-weight: 700;
+    overflow-y: hidden;
 `
