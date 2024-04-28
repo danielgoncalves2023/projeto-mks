@@ -21,6 +21,7 @@ export const CartTitle = styled.h1`
     font-size: 25px;
     font-weight: 700;
     padding-left: 30px;
+    overflow: hidden;
     
     @media (max-width: 520px) {
         width: 180px;
@@ -36,6 +37,7 @@ export const CloseCart = styled(motion.p)`
     padding: 5px 10px;
     color: #FFFFFF;
     cursor: pointer;
+    overflow: hidden;
 
     @media (max-width: 520px) {
         width: auto;
