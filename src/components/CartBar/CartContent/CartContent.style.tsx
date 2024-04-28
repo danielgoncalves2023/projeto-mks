@@ -48,6 +48,7 @@ export const CardProductTitle = styled.h1`
     width: 113px;
     font-size: 13px;
     font-weight: 400;
+    overflow: hidden;
 
     @media (max-width: 520px) {
         font-size: 16px;

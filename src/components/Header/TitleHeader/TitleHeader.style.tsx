@@ -7,6 +7,7 @@ export const TitleDiv = styled.div`
     height: 50px;
     margin-left: 80px;
     cursor: default;
+    overflow: hidden;
 
     @media (max-width: 520px) {
         margin-left: 0;

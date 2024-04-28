@@ -5,6 +5,7 @@ export const CardImage = styled.img`
         margin: auto;
         width: auto;
         height: 138px;
+        margin-top: 10px;
         object-fit: cover;
     `
 

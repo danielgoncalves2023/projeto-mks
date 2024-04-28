@@ -12,6 +12,7 @@ export const CardButton = styled(motion.div)`
     background-color: white;
     margin-right: 80px;
     cursor: pointer;
+    overflow: hidden;
 
     @media (max-width: 520px) {
         width: 52px;
