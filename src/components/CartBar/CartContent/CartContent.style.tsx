@@ -23,6 +23,7 @@ export const CardProductDiv = styled(motion.div)`
     padding: 0 5px;
 
     @media (max-width: 520px) {
+        padding-top: 10px;
         width: 250px;
         height: 220px;
         flex-direction: column;

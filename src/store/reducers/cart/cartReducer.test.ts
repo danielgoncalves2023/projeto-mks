@@ -1,5 +1,4 @@
 import cartReducer from './cartReducer';
-import cartActionTypes from '../../types/cart/cartTypes';
 import { addItemInCart, checkoutCart, decItemOfCart, removeItemInCart, sumItemOfCart } from '../../actions/cart/cartActions';
 
 describe('cartReducer', () => {

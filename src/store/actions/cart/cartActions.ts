@@ -1,7 +1,5 @@
 import cartActionTypes from "../../types/cart/cartTypes"
 
-
-
 export function addItemInCart(name: string, photo: string, price: string): {
     type: string
     payload: {

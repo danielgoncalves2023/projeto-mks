@@ -1,5 +1,6 @@
 import { CardImage, DivTitle, CardTitle as Title, CardPrice } from "./CardTitle.style"
 
+// Parte superior da Card do produto
 export const CardTitle = ({ roundedPrice, product }: any) => {
 
     return (

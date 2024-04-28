@@ -1,10 +1,10 @@
-import { useSelector } from "react-redux";
-import { CartBar } from "../CartBar/CartBar";
 import { HeaderContainer } from "./Header.style";
-import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
 import { TitleHeader } from "./TitleHeader/TitleHeader";
 import { ButtonHeader } from "./ButtonHeader/ButtonHeader";
+import { CartBar } from "../CartBar/CartBar";
+import { useState } from "react";
+import { useSelector } from "react-redux";
+import { AnimatePresence } from "framer-motion";
 
 export const Header = () => {
     const { totalProducts } = useSelector((rootReducer: any) => rootReducer.cartReducer)

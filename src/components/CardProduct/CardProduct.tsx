@@ -1,9 +1,10 @@
-import { useDispatch } from "react-redux"
 import { CardContainer } from "./CardProduct.style";
 import { CardTitle } from "./CardTitle/CardTitle";
 import { CardDetail } from "./CardDetail/CardDetail";
 import { CardButton } from "./CardButton/CardButton";
+import { useDispatch } from "react-redux"
 
+// Card do produto que será renderizado na Home via API
 export const CardProduct = ({ product }: any) => {
     const roundedPrice = (price: number) => Math.round(price);
     const dispatch = useDispatch();

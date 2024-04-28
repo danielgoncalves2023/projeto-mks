@@ -3,11 +3,10 @@ import styled from "styled-components"
 
 export const CardContainer = styled(motion.div)`
         position: relative;
-        margin: 0px auto 30px;
+        margin: 0 auto 20px;
         width: 218px;
-        height: 305px;
+        height: 285px;
         background-color: white;
-        padding: 2px;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         box-sizing: border-box;
         border-radius: 12px;

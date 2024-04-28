@@ -1,5 +1,6 @@
 import { CardButton, CartImage, CartCount } from "./ButtonHeader.style"
 
+// Button que irá abrir a janela lateral, e mostrar quantidade de produtos no carrinho
 export const ButtonHeader = ({ totalProducts, handleOpenCart }: any) => {
 
     return (

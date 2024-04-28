@@ -7,7 +7,7 @@ export const GridContainer = styled.section`
     @media (max-width: 520px) {
         display: grid;
         place-content: center;
-        margin-top: 20px;
+        margin: 20px auto 50px;
     }
 
     @media (min-width: 1020px) {

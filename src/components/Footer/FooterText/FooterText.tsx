@@ -1,10 +1,10 @@
-import { TextFooter } from "./FooterText.style"
+import { FooterText as Text } from "./FooterText.style"
 
 export const FooterText = ({ children }: any) => {
 
     return (
-        <TextFooter>
+        <Text>
             { children }
-        </TextFooter>
+        </Text>
     )
 }

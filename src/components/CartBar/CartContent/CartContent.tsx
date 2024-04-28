@@ -4,26 +4,8 @@ import {
     CardProductTitle, CartContentDiv, CartProductDivMobile
 } from "./CartContent.style"
 
-export const CartProductMobile = ({
-    roundedPrice, actionsCart, product
-}: any) => {
-
-    return (
-        <CartProductDivMobile>
-            <CardProductCountContainer>
-                <CardProductCountTitle>Qtd:</CardProductCountTitle>
-                <CardProductCountDiv>
-                    <CardProductCountDec onClick={() => actionsCart.decreaseQuantity(product.name)}>-</CardProductCountDec>
-                    <CardProductCount>{product.quantity}</CardProductCount>
-                    <CardProductCountSum onClick={() => actionsCart.increaseQuantity(product.name)}>+</CardProductCountSum>
-                </CardProductCountDiv>
-            </CardProductCountContainer>
-            <CardProductPrice>R${roundedPrice(product.totalPrice)}</CardProductPrice>
-        </CartProductDivMobile>
-    )
-}
-
-export const CartProduct = ({
+// Layout da visualização do produto no carrinho
+export const CardProduct = ({
     roundedPrice, actionsCart, product
 }: any) => {
 
@@ -42,7 +24,28 @@ export const CartProduct = ({
     )
 }
 
-export const CardProduct = ({
+// Layout da visualização do produto no carrinho para mobiles até 520px de width
+export const CardProductMobile = ({
+    roundedPrice, actionsCart, product
+}: any) => {
+
+    return (
+        <CartProductDivMobile>
+            <CardProductCountContainer>
+                <CardProductCountTitle>Qtd:</CardProductCountTitle>
+                <CardProductCountDiv>
+                    <CardProductCountDec onClick={() => actionsCart.decreaseQuantity(product.name)}>-</CardProductCountDec>
+                    <CardProductCount>{product.quantity}</CardProductCount>
+                    <CardProductCountSum onClick={() => actionsCart.increaseQuantity(product.name)}>+</CardProductCountSum>
+                </CardProductCountDiv>
+            </CardProductCountContainer>
+            <CardProductPrice>R${roundedPrice(product.totalPrice)}</CardProductPrice>
+        </CartProductDivMobile>
+    )
+}
+
+// Div do produto no carrinho que será visualizado ao abrir janela lateral
+export const CartProduct = ({
     responsiveMode, product,
     roundedPrice, actionsCart
 }: any) => {
@@ -67,12 +70,12 @@ export const CardProduct = ({
                 {
                     responsiveMode ?
                         (
-                            <CartProductMobile
+                            <CardProductMobile
                                 roundedPrice={roundedPrice} actionsCart={actionsCart} product={product}
                             />
                         ) :
                         (
-                            <CartProduct
+                            <CardProduct
                                 roundedPrice={roundedPrice} actionsCart={actionsCart} product={product}
                             />
                         )

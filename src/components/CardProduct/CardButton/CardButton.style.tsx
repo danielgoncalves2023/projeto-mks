@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const CardButton = styled.button`
-        position: relative;
-        bottom: -29px;
-        left: -2px;
+        position: absolute;
+        bottom: 0;
         width: 218px;
+        margin: auto;
         height: 31px;
         background-color: #0F52BA;
         border: none;

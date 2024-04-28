@@ -1,10 +1,10 @@
+import { LayoutContainer } from "./Layout.style"
 import { CardProduct } from "../CardProduct/CardProduct"
 import { Header } from "../Header/Header"
 import { Footer } from "../Footer/Footer"
 import { GridProducts } from "../GridProducts/GridProducts"
 import { useQuery } from "react-query"
 import Skeleton from "@mui/material/Skeleton/Skeleton"
-import { LayoutContainer } from "./Layout.style"
 
 interface Product {
     id: number;

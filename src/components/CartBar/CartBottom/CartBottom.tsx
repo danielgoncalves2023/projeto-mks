@@ -1,5 +1,8 @@
-import { ButtonCheckout, ButtonCheckoutTitle, ContainerBottomDiv, TotalInfoDiv, TotalPriceTitle, TotalPriceValue } from "./CartBottom.style"
+import {
+    ButtonCheckout, ButtonCheckoutTitle, ContainerBottomDiv, TotalInfoDiv, TotalPriceTitle, TotalPriceValue
+} from "./CartBottom.style"
 
+// Parte inferior do carrinho, onde será mostrado valor total de produtos, e botão "Finalizar Compra"
 export const CartBottom = ({ roundedPrice, totalValue, checkout }: any) => {
 
     return (

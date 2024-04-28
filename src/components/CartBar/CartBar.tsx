@@ -1,12 +1,12 @@
-import { useDispatch, useSelector } from "react-redux";
-import { useMediaQuery } from "react-responsive";
 import { CartBarContainer } from "./CartBar.style";
-import { AnimatePresence } from "framer-motion";
-import * as actions from "../../store/actions/cart/cartActions";
-import { CartHeader } from "./CartHeader/CartHeader";
-import { CartBottom } from "./CartBottom/CartBottom";
-import { CartContentContainer, CardProduct } from "./CartContent/CartContent";
+import { CartHeader as Header } from "./CartHeader/CartHeader";
+import { CartContentContainer as Body, CartProduct } from "./CartContent/CartContent";
+import { CartBottom as Footer } from "./CartBottom/CartBottom";
 import { RemoveProduct } from "./CartBar.style";
+import { useDispatch, useSelector } from "react-redux";
+import { AnimatePresence } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
+import * as actions from "../../store/actions/cart/cartActions";
 
 export const CartBar = ({ closeCart }: any): any => {
     const { products, totalValue } = useSelector((rootReducer: any) => rootReducer.cartReducer);
@@ -17,6 +17,7 @@ export const CartBar = ({ closeCart }: any): any => {
     const dispatch = useDispatch();
     const roundedPrice = (price: number) => Math.round(price);
 
+    // Ações de interação com o menu de carrinho
     const actionsCart = {
         increaseQuantity: (name: string) => dispatch(actions.sumItemOfCart(name)),
         decreaseQuantity: (name: string) => dispatch(actions.decItemOfCart(name)),
@@ -57,12 +58,12 @@ export const CartBar = ({ closeCart }: any): any => {
                     }
                 }}
             >
-                <CartHeader closeCart={closeCart} />
-                <CartContentContainer>
+                <Header closeCart={closeCart} />
+                <Body>
                     <AnimatePresence>
                         {products.map((product: any, index: number) => (
                             <div key={index}>
-                                <CardProduct
+                                <CartProduct
                                     responsiveMode={responsiveMode} product={product}
                                     roundedPrice={roundedPrice} actionsCart={actionsCart}
                                 />
@@ -77,7 +78,7 @@ export const CartBar = ({ closeCart }: any): any => {
                                     exit={{
                                         opacity: 0,
                                         transition: {
-                                            transition: 0.3
+                                            duration: 0
                                         }
                                     }}
                                     whileHover={{ scale: 0.95 }}
@@ -87,8 +88,8 @@ export const CartBar = ({ closeCart }: any): any => {
                             </div>
                         ))}
                     </AnimatePresence>
-                </CartContentContainer>
-                <CartBottom roundedPrice={roundedPrice} totalValue={totalValue} checkout={actionsCart.checkout} />
+                </Body>
+                <Footer roundedPrice={roundedPrice} totalValue={totalValue} checkout={actionsCart.checkout} />
             </CartBarContainer >
         </>
     );

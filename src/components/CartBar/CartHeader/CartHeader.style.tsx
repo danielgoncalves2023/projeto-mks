@@ -39,7 +39,7 @@ export const CloseCart = styled(motion.p)`
 
     @media (max-width: 520px) {
         width: auto;
-        margin-right: 50px;
+        margin-right: 25px;
         font-size: 34px;
         padding: 0 12px;
         color: #0F52BA;
